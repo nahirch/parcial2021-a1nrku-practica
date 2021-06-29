@@ -25,6 +25,8 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
 import { ModalDialogService } from './services/modal-dialog.service';
+import { ProductosComponent } from './components/productos/productos.component';
+import { ProductosService } from './services/productos.service';
 
 @NgModule({
   imports: [
@@ -39,7 +41,9 @@ import { ModalDialogService } from './services/modal-dialog.service';
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent },
       { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
-      { path: 'articulos', component: ArticulosComponent }
+      { path: 'articulos', component: ArticulosComponent },
+      { path: 'productos', component: ProductosComponent }
+
     ])
   ],
   declarations: [
@@ -49,7 +53,8 @@ import { ModalDialogService } from './services/modal-dialog.service';
     ArticulosFamiliasComponent,
     MenuComponent,
     ArticulosComponent,
-    ModalDialogComponent
+    ModalDialogComponent,
+    ProductosComponent
   ],
   entryComponents: [ModalDialogComponent],
   bootstrap: [AppComponent],
@@ -59,7 +64,8 @@ import { ModalDialogService } from './services/modal-dialog.service';
     MockArticulosFamiliasService,
     ArticulosFamiliasService,
     ArticulosService,
-    ModalDialogService
+    ModalDialogService,
+    ProductosService
   ]
 })
 export class AppModule {}
