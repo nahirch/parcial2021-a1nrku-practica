@@ -33,17 +33,6 @@
         <td>{{item.ProductoNombre | uppercase}}</td>
         <td class="text-right">{{item.ProductoStock}}</td>
         <td>{{item.ProductoFechaAlta| date:'dd/MM/yyyy'}}</td>
-        <td class="text-center text-nowrap">
-          <button
-            type="button"
-            class="btn btn-sm btn-outline-primary"
-            title="Consultar"
-            (click)="Consultar(item)"
-          >
-            <span class="fas fa-eye"></span>
-          </button>
-         
-        </td>
       </tr>
     </tbody>
   </table>
@@ -160,4 +149,4 @@
   <div id="divMsjFormRegistro" class="row alert alert-danger" *ngIf="submitted && FormRegistro.invalid">
     <span class="fas fa-exclamation-sign"></span>{{Mensajes['RD']}}
   </div>
-</form>
+<!--</form> -->
