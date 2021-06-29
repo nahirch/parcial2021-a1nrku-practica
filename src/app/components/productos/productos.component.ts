@@ -72,17 +72,15 @@ export class ProductosComponent implements OnInit {
 
   Agregar() {
     this.AccionABMC = 'A';
-    this.FormRegistro.reset({ Activo: true, IdArticulo: 0 });
+    this.FormRegistro.reset({ Activo: true, ProductoID: 0 });
     this.submitted = false;
     this.FormRegistro.markAsUntouched();
   }
 
   // Buscar segun los filtros, establecidos en FormRegistro
   Buscar() {
-    //this.modalDialogService.BloquearPantalla();
     this.productosService
       .get()
-      //this.articulosService.get("", null, this.Pagina)
       .subscribe((res: any) => {
         this.Items = res;
         this.RegistrosTotal = res.RegistrosTotal;
